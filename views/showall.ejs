@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/showall.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>CoinPrice</title>
+    <title>CoinPrice - Show All</title>
 </head>
 <body>
     <%- include('header') %>
     <div class="container">
-        <h2>Top Gainers</h2>
+        <h2>All Cryptocurrencies</h2>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for a cryptocurrency...">
+        </div>
         <table class="table table-dark table-hover">
             <thead>
                 <tr>
@@ -19,28 +22,7 @@
                 </tr>
             </thead>
             <tbody>
-                <% topGainers.forEach(gainer => { %>
-                    <tr>
-                        <td>
-                            <img src="<%= gainer.image %>" alt="<%= gainer.symbol %> logo" class="img-fluid">
-                            <%= gainer.symbol.toUpperCase() %>
-                        </td>
-                        <td><%= gainer.current_price %></td>
-                    </tr>
-                <% }); %>
-            </tbody>
-        </table>
-
-        <h2>Trending Coins</h2>
-        <table class="table table-dark table-hover">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% trendingCoins.forEach(coin => { %>
+                <% allCoins.forEach(coin => { %>
                     <tr>
                         <td>
                             <img src="<%= coin.image %>" alt="<%= coin.symbol %> logo" class="img-fluid">
