@@ -1,11 +1,10 @@
 # CoinPrice Web Application
 
 ## Overview
-CoinPrice is a web application that displays information about various cryptocurrencies, including their prices, trends, and other relevant data. This application is built using Node.js, Express, EJS, and Bootstrap.
-
+CoinPrice is a web application that displays prices of crypto currencies in comparison to USDT. This project was made by the developer to demonstrate understanding of various node topics and APIs usage where Binance API was leverged to import the prices. 
 ## Installation and Setup
 
-### Prerequisites
+## Prerequisites
 - Node.js (version 14 or above)
 - npm (version 6 or above)
 
