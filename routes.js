@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
         });
 
         const topGainers = response.data;
-        const trendingCoins = response.data; // Modify this to fetch trending coins as needed
+        const trendingCoins = response.data; 
 
         res.render('index', { topGainers, trendingCoins });
     } catch (error) {
